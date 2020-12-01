@@ -1,16 +1,14 @@
 
-<h2> Nos produits en informatique </h2>
+<h2 class="text-center pt-3"> Nos produits en informatique </h2>
+<div class="container">
+<div class="row">
 
-<ul>
+
 <ng-container *ngFor="let mat of materiels" >
-<li *ngIf="mat.quantite > 0">
-<img id="img2" [src]="mat.photo" alt="photo"> 
-{{mat.libelle |titlecase}} 
-
-<span class="badge badge-pill "
-[ngClass]="{'badge-primary':mat.hautGamme,
-            'badge-dark':!mat.hautGamme}">
-Prix: {{mat.prix}} DT 
-<i [ngClass]="{'fa fa-thumbs-up':mat.hautGamme}"></i>
-</span>
+<div class="col-4 pt-3" *ngIf="mat.quantite > 0">
+     <azi-materiel [materiel]="mat"></azi-materiel>
+</div>
 </ng-container>
+
+</div>
+</div>
