@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import { Materiel } from 'src/app/models/materiel';
-import { Router } from '@angular/router';
+
 
 @Component({
-  selector: 'azi-detailmateriel',
-  templateUrl: './detailmateriel.component.html',
-  styleUrls: ['./detailmateriel.component.css']
+  selector: 'azi-comment',
+  templateUrl: './comment.component.html',
+  styleUrls: ['./comment.component.css']
 })
-export class DetailmaterielComponent implements OnInit {
-  materiel:Materiel ={
+export class CommentComponent implements OnInit {
+
+  
+  comment:Materiel ={
     id: '2',
     libelle: 'PC',
     photo:'assets/Images/Informatique/pcFixe.jpg',
@@ -22,15 +24,9 @@ export class DetailmaterielComponent implements OnInit {
    {contenu:'Bon rapport qualité prix', note:4, auteur:'Samar Salah', date:new Date(
    2020,10,4)}]
    };
-   
-  constructor(private router:Router) { }
 
-  onAfficher(pageName:string):void{
-    this.router.navigate([`${pageName}`]);
-    
-   
+  constructor() { }
 
-}
   ngOnInit(): void {
   }
 
